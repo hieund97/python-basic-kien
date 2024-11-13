@@ -1,3 +1,7 @@
+import os
+import datetime
+
+
 menu = {
     "DADDY": "0984037755",
     "MAMA": "0379948755" ,
@@ -121,7 +125,79 @@ Tình hà giang - Mã vùng 200000
 -> Nếu có thì in: Tỉnh Hà Nội - Mã vùng 100000
 -> Nếu không thì in: Không tìm thay trong CSDL
 
+
+CRUD
+Create -> Tạo mới
+Read -> Đọc thông tin dữ liệu
+Update -> Cập nhật
+Delete -> xoá
+
 """
+
+dictionary = {
+    "Ha Noi": 100000,
+    "Ha Giang": 200000,
+    "Ha Nam": 300000,
+    "Ha Tinh": 400000,
+    "Ha Dong": 500000,
+    "Ha Tay": 600000,
+    "Hai Phong": 700000,
+    "Hai Duong": 800000,
+}
+
+
+# try:
+#     a = int(input("Nhap vao tinh thanh muon tinh :"))
+#     print(a)
+# except:
+#     print("Khong tim thay tinh thanh muon tinh")
+
+
+"""
+Có 4 chế độ mở file
+r -> read đọc file -> Lỗi: nếu file không tồn tại
+a -> append thêm vào cuối cùng của file -> Nếu file ko tồn tại, tự động tạo mới file
+w -> write ghi đè nội dung file -> Nếu file ko tồn tại, tự động tạo mới file
+x -> Tạo mới file -> Lỗi: Nếu file đã tồn tại rồi
+
+
+"""
+
+"""
+Tạo 1 file với nội dung:
+Welcome! Are you completely new to programming? If not then we presume you will be looking for information about why and how to get started with Python. Fortunately an experienced programmer in any programming language (whatever it may be) can pick up Python very quickly. It's also easy for beginners to use and learn, so jump in!
+
+
+Yêu cầu: thay thế toàn bộ chữ Python bằng Java
+
+"""
+
+
+# string = "Welcome! Are you completely new to programming? If not then we presume you will be looking for information about why and how to get started with Python. Fortunately an experienced programmer in any programming language (whatever it may be) can pick up Python very quickly. It's also easy for beginners to use and learn, so jump in!"
+
+# f = open("python.txt", "w")
+# f.write(string)
+# f.close()
+
+
+# f = open("python.txt", "r")
+# all_string = f.read()
+# all_string = all_string.replace("Python", "Java")
+# f.close()
+
+# f = open("python.txt", "w")
+# f.write(all_string)
+# f.close()
+
+# kiểm tra file tồn tại
+
+if os.path.exists("python.txt"):
+    os.remove("python.txt")
+else:
+    print("Khong tim thay file")
+
+now = datetime.datetime.now() # in ra thời gian hiện tại
+print(now)
 
 
 
